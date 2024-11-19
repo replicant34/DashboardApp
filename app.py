@@ -913,8 +913,28 @@
     "# ------------------------------------------------------------------------------------\n",
     "# ------------------------------------------------------------------------------------\n",
     "if __name__ == \"__main__\":\n",
-    "    app.run_server(mode=\"external\", debug=True)"
+    "    app.run_server(mode=\"external\", debug=True)\n",
+    "\n"
    ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "f6095754-2ca2-4029-b2fd-a76c8c1ec9f9",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "app = Dash(__name__, suppress_callback_exceptions=True)\n",
+    "server = app.server"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "20e7adb8-bd5a-4e01-b851-888277767755",
+   "metadata": {},
+   "outputs": [],
+   "source": []
   }
  ],
  "metadata": {
