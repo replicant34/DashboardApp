@@ -7,19 +7,20 @@
    "metadata": {},
    "outputs": [],
    "source": [
-    "# Libraries\n",
-    "# ----------------------------------------\n",
-    "from jupyter_dash import JupyterDash\n",
+    "# Import libraries\n",
+    "from dash import Dash, dcc, html, Input, Output\n",
     "import pandas as pd\n",
     "import plotly.express as px\n",
     "import plotly.graph_objects as go\n",
-    "from dash import Dash, dcc, html, Input, Output \n",
     "from sklearn.neighbors import NearestNeighbors\n",
     "from sklearn.model_selection import train_test_split\n",
     "from mlxtend.frequent_patterns import apriori, association_rules\n",
-    "from statsmodels.tsa.statespace.sarimax import SARIMAX\n",
-    "from pmdarima import auto_arima\n",
     "import networkx as nx\n",
+    "import os\n",
+    "\n",
+    "# Initialize Dash app\n",
+    "app = Dash(__name__, suppress_callback_exceptions=True)\n",
+    "server = app.server\n",
     "\n",
     "# ----------------------------------------\n",
     "# Data Prep\n",
@@ -913,25 +914,13 @@
     "# ------------------------------------------------------------------------------------\n",
     "# ------------------------------------------------------------------------------------\n",
     "if __name__ == \"__main__\":\n",
-    "    app.run_server(mode=\"external\", debug=True)\n",
-    "\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 2,
-   "id": "f6095754-2ca2-4029-b2fd-a76c8c1ec9f9",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "app = Dash(__name__, suppress_callback_exceptions=True)\n",
-    "server = app.server"
+    "    app.run_server(debug=False)"
    ]
   },
   {
    "cell_type": "code",
    "execution_count": null,
-   "id": "20e7adb8-bd5a-4e01-b851-888277767755",
+   "id": "0bfaffc3-6bd2-41c1-8ef3-fbfffb1ef7d8",
    "metadata": {},
    "outputs": [],
    "source": []
@@ -953,7 +942,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.9.19"
+   "version": "3.9.20"
   }
  },
  "nbformat": 4,
