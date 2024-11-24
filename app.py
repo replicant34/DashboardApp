@@ -325,6 +325,7 @@ def plot_rule_graph(rules, product_basket):
 # ------------------------------------------------------------------------------------
 
 app = Dash(__name__, suppress_callback_exceptions=True)
+server = app.server
 
 
 # ------------------------------------------------------------------------------------
